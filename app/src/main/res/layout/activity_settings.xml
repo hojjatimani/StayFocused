@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_xlight"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:background="@color/primary"
+        android:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="@dimen/actionBarSize"
+                android:layout_height="@dimen/actionBarSize"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/background"
+                android:src="@drawable/ic_action_forward" />
+
+            <TextView
+                android:id="@+id/activity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/back"
+                android:text="title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xlarge" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/space_medium">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/space_medium">
+
+                <TextView
+                    android:id="@+id/app_name"
+                    style="@style/mainSettingsTextStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="تحتر نظر باشید" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_switch"
+                    android:checked="false"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/switch_status"
+                    android:layout_marginLeft="@dimen/space_large"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/app_switch"
+                    android:layout_toEndOf="@+id/app_switch"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_large" />
+
+            <TextView
+                android:id="@+id/main_settings"
+                style="@style/mainSettingsTextStyle"
+                android:text="تنظیمات اصلی"
+                android:textColor="@color/primary"/>
+
+            <View style="@style/line_thick" />
+
+            <LinearLayout
+                android:id="@+id/setup_time_"
+                style="@style/settingContainerLayout">
+
+                <TextView
+                    android:id="@+id/change_setup_time"
+                    style="@style/mainSettingsTextStyle"
+                    android:text="مزمان آزاد ایجاد تغییرات" />
+
+                <TextView
+                    android:id="@+id/setup_time_desc"
+                    style="@style/settingsTextStyle"
+                    android:text="تنها در این زمان می توانید تنظیمات برنامه را بدون دردسر تغییر دهید" />
+            </LinearLayout>
+
+            <View style="@style/line" />
+
+            <LinearLayout
+                android:id="@+id/block_text_"
+                style="@style/settingContainerLayout">
+
+                <TextView
+                    android:id="@+id/change_block_text"
+                    style="@style/mainSettingsTextStyle"
+                    android:text="متن اعلام وقت" />
+
+                <TextView
+                    android:id="@+id/block_text_desc"
+                    style="@style/settingsTextStyle"
+                    android:text="جمله ای که در صفحه بلاک برنامه ها نمایش داده میشود" />
+            </LinearLayout>
+
+            <View style="@style/line" />
+
+            <LinearLayout
+                android:id="@+id/extend_possiblility"
+                style="@style/settingContainerLayout">
+
+                <TextView
+                    android:id="@+id/exted_possibility_text"
+                    style="@style/mainSettingsTextStyle"
+                    android:text="متن اعلام وقت" />
+
+                <TextView
+                    android:id="@+id/extend_possibility_desc"
+                    style="@style/settingsTextStyle"
+                    android:text="جمله ای که در صفحه بلاک برنامه ها نمایش داده میشود" />
+            </LinearLayout>
+
+            <View style="@style/line" />
+
+            <LinearLayout
+                android:id="@+id/reset_time_"
+                style="@style/settingContainerLayout">
+
+                <TextView
+                    android:id="@+id/change_reset_time"
+                    style="@style/mainSettingsTextStyle"
+                    android:text="مزمان ریست روزانه" />
+
+                <TextView
+                    android:id="@+id/reset_time_desc"
+                    style="@style/settingsTextStyle"
+                    android:text="ج23:59 (غیر قابل تغییر)" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_large" />
+
+            <TextView
+                android:id="@+id/about"
+                style="@style/mainSettingsTextStyle"
+                android:text="درباره"
+                android:textColor="@color/primary"/>
+
+            <View style="@style/line_thick" />
+
+            <LinearLayout
+                android:id="@+id/about_app_"
+                style="@style/settingContainerLayout">
+
+                <TextView
+                    android:id="@+id/about_app"
+                    style="@style/mainSettingsTextStyle"
+                    android:text="راهنمای استفاده" />
+
+                <TextView
+                    android:id="@+id/about_app_desc"
+                    style="@style/settingsTextStyle"
+                    android:text="این اپ چیست و چکار می کند؟" />
+            </LinearLayout>
+
+            <View style="@style/line" />
+
+            <LinearLayout
+                android:id="@+id/contact_us_"
+                style="@style/settingContainerLayout">
+
+                <TextView
+                    android:id="@+id/contact_us"
+                    style="@style/mainSettingsTextStyle"
+                    android:text="تماس با ما" />
+
+                <TextView
+                    android:id="@+id/contact_us_desc"
+                    style="@style/settingsTextStyle"
+                    android:text="مشکلی هست؟ سوالی دارید؟ خوشحال میشویم کمک کنیم" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_large" />
+
+            <TextView
+                android:id="@+id/support"
+                style="@style/mainSettingsTextStyle"
+                android:text="حمایت"
+                android:textColor="@color/primary"/>
+
+            <View style="@style/line_thick" />
+
+            <LinearLayout
+                android:id="@+id/donate_"
+                style="@style/settingContainerLayout"
+                >
+
+                <TextView
+                    android:id="@+id/donate"
+                    style="@style/mainSettingsTextStyle"
+                    android:text="پرداخت هزینه برنامه (donate)" />
+
+                <TextView
+                    android:id="@+id/donate_desc"
+                    style="@style/settingsTextStyle"
+                    android:text="فروشی مبتنی بر اعتماد برای ایرانیان" />
+            </LinearLayout>
+
+            <View style="@style/line"
+                android:id="@+id/line_after_donate"/>
+
+            <LinearLayout
+                android:id="@+id/rate_"
+                style="@style/settingContainerLayout">
+
+                <TextView
+                    android:id="@+id/rate_comment"
+                    style="@style/mainSettingsTextStyle"
+                    android:text="ستاره نظر دادن در کافه بازار" />
+
+                <TextView
+                    android:id="@+id/rate_comment_desc"
+                    style="@style/settingsTextStyle"
+                    android:text="بازخورد شما برای ما ارزشمند است." />
+            </LinearLayout>
+
+            <View style="@style/line" />
+
+            <LinearLayout
+                android:id="@+id/tell_friends_"
+                style="@style/settingContainerLayout">
+
+                <TextView
+                    android:id="@+id/tell_friends"
+                    style="@style/mainSettingsTextStyle"
+                    android:text="پیشنهاد به دیگران" />
+
+                <TextView
+                    android:id="@+id/tell_friends_desc"
+                    style="@style/settingsTextStyle"
+                    android:text="بنظر شما برنامه مفیدی است؟ پس آن را به دوستانتان توصیه کنید!" />
+
+            </LinearLayout>
+
+            <View style="@style/line"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_large"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/about_us_"
+                android:visibility="gone"
+                style="@style/settingContainerLayout"
+                >
+
+                <TextView
+                    android:id="@+id/about_us"
+                    style="@style/mainSettingsTextStyle"
+                    android:text="درباره ما" />
+                <TextView
+                    style="@style/settingsTextStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

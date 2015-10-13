@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/space_xlarge"
+    android:paddingRight="@dimen/space_xlarge"
+    android:paddingTop="@dimen/space_xlarge">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="tile"
+        android:id="@+id/title"
+        android:textSize="@dimen/dialog_title_text_size"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text"
+        android:textSize="@dimen/dialog_message_text_size"
+        />
+
+    <com.gc.materialdesign.views.ButtonFlat
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dialog_buttons_size"
+        android:layout_alignParentRight="true"
+        android:background="@color/primary"
+        android:id="@+id/set_default"
+        android:text="default"
+        android:layout_marginTop="@dimen/space_medium"
+        android:layout_marginBottom="@dimen/space_medium">
+
+    </com.gc.materialdesign.views.ButtonFlat>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_buttons_panel_size"
+        android:gravity="center_vertical">
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dialog_buttons_size"
+            android:layout_alignParentLeft="true"
+            android:background="@color/primary"
+            android:id="@+id/ok"
+            android:text="ok">
+
+        </com.gc.materialdesign.views.ButtonFlat>
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dialog_buttons_size"
+            android:layout_toRightOf="@+id/ok"
+            android:background="@color/primary"
+            android:id="@+id/cancel"
+
+            android:text="cancel">
+
+        </com.gc.materialdesign.views.ButtonFlat>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

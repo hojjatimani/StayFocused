@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:background="@color/gray_xlight"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:background="@color/primary"
+        android:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/cancel"
+                android:layout_width="@dimen/actionBarSize"
+                android:layout_height="@dimen/actionBarSize"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/background"
+                android:src="@drawable/ic_action_cancel" />
+
+            <TextView
+                android:id="@+id/activity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/cancel"
+                android:text="title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <ImageButton
+                android:id="@+id/ok"
+                android:layout_width="@dimen/actionBarSize"
+                android:layout_height="@dimen/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/background"
+                android:src="@drawable/ic_action_accept" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/space_large">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="با تنظیم یک بازه زمانی در شبانه روز (مثلا یک ساعته) بعنوان بازه زمانی مجاز ایجاد تغییرات، جلوی خودتان را هنگامی که بعد از اتمام وقت وسوسه می شوید که زمان استفاده را بیشتر کرده یا برنامه را غیر فعال کیند، بگیرید!"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginBottom="@dimen/space_medium"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_medium">
+
+            <RadioButton
+                android:id="@+id/always"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="0dp"
+                android:text=""
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/always_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/always"
+                android:text="always"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_low">
+
+            <RadioButton
+                android:id="@+id/specific_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/specific_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/specific_time"
+                android:text="specific time"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/set_specific_time"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/to_time"
+                    android:paddingLeft="@dimen/space_xlarge"
+                    android:text=":تا"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    android:id="@+id/to_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:drawablePadding="@dimen/space_medium"
+                    android:gravity="center"
+                    android:inputType="time"
+                    android:text="22:00"
+                    android:textSize="@dimen/text_size_medium"
+                    android:paddingBottom="@dimen/space_medium"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/line_size"
+                    android:background="@color/black"
+                    android:layout_below="@+id/to_time"
+                    android:layout_centerHorizontal="true"
+                     />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/from_time"
+                android:paddingLeft="@dimen/space_xlarge"
+                android:text="از:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    android:id="@+id/from_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:drawablePadding="@dimen/space_medium"
+                    android:gravity="center"
+                    android:inputType="time"
+                    android:text="22:00"
+                    android:textSize="@dimen/text_size_medium"
+                    android:paddingBottom="@dimen/space_medium"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/line_size"
+                    android:background="@color/black"
+                    android:layout_below="@+id/from_time"
+                    android:layout_centerHorizontal="true"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_xlight"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:background="@color/primary"
+        android:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="@dimen/actionBarSize"
+                android:layout_height="@dimen/actionBarSize"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/background"
+                android:src="@drawable/ic_action_forward" />
+
+            <TextView
+                android:id="@+id/activity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/back"
+                android:text="title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <ImageButton
+                android:layout_width="@dimen/actionBarSize"
+                android:layout_height="@dimen/actionBarSize"
+                android:id="@+id/refresh"
+                android:background="@drawable/background"
+                android:src="@drawable/ic_action_refresh"
+                android:layout_toLeftOf="@+id/activity_title"
+                android:layout_toStartOf="@+id/activity_title"
+                android:layout_marginRight="@dimen/text_size_xlarge"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_medium"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_medium"
+                android:text="explanation"
+                android:id="@+id/explanation"
+                android:textColor="@color/gray_dark"
+                android:gravity="right"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/space_medium"
+                android:paddingTop="@dimen/space_medium"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_large"
+                    android:textColor="@color/black"
+                    android:id="@+id/status"
+                    android:text="status"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    />
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar"
+                    android:layout_toRightOf="@+id/status"
+                    android:layout_marginLeft="@dimen/space_low"
+                    />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_medium"
+                android:id="@+id/error"
+                android:text="the problem is ..."
+                android:gravity="right"
+                android:layout_marginRight="@dimen/space_medium"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dialog_buttons_panel_size"
+                android:paddingRight="@dimen/space_large"
+                android:gravity="center_vertical">
+
+                <com.gc.materialdesign.views.ButtonFlat
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dialog_buttons_size"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/primary"
+                    android:id="@+id/pay_price1"
+                    android:text="pay price 1">
+
+                </com.gc.materialdesign.views.ButtonFlat>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dialog_buttons_panel_size"
+                android:paddingRight="@dimen/space_large"
+                android:gravity="center_vertical">
+
+                <com.gc.materialdesign.views.ButtonFlat
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dialog_buttons_size"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/primary"
+                    android:id="@+id/pay_price2"
+                    android:text="pay price 2">
+
+                </com.gc.materialdesign.views.ButtonFlat>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dialog_buttons_panel_size"
+                android:paddingRight="@dimen/space_large"
+                android:gravity="center_vertical">
+
+                <com.gc.materialdesign.views.ButtonFlat
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dialog_buttons_size"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/primary"
+                    android:id="@+id/pay_price3"
+                    android:text="pay price 3">
+
+                </com.gc.materialdesign.views.ButtonFlat>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accent</item>
+        <!--<item name="colorControlNormal">@color/controlNormal</item>-->
+        <item name="colorControlActivated">@color/controlActivated</item>
+        <item name="colorControlHighlight">@color/controlHighlight</item>
+        <item name="homeAsUpIndicator">@null</item>
+    </style>
+
+    <style name="mainSettingsTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/gray_xdark</item>
+        <item name="android:layout_marginRight">@dimen/space_medium</item>
+        <item name="android:layout_marginLeft">@dimen/space_medium</item>
+    </style>
+
+    <style name="settingsTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/gray_xdark</item>
+        <item name="android:layout_marginRight">@dimen/space_medium</item>
+        <item name="android:layout_marginLeft">@dimen/space_medium</item>
+    </style>
+
+    <style name="line_thick">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_size_thick</item>
+        <item name="android:background">@color/gray</item>
+        <item name="android:layout_marginTop">@dimen/space_low</item>
+    </style>
+
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_size</item>
+        <item name="android:background">@color/gray_light</item>
+    </style>
+
+    <style name="settingContainerLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">right</item>
+        <item name="android:background">@drawable/background_gray_accent</item>
+        <item name="android:paddingBottom">@dimen/space_medium</item>
+        <item name="android:paddingTop">@dimen/space_medium</item>
+    </style>
+</resources>

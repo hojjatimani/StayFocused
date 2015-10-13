@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:paddingLeft="@dimen/space_xlarge"
+    android:paddingRight="@dimen/space_xlarge"
+    android:paddingTop="@dimen/space_xlarge">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dialog_title_text_size"
+        android:layout_marginBottom="@dimen/text_size_medium"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textColor="@color/gray_dark"
+        android:textSize="@dimen/dialog_message_text_size"
+        android:layout_marginBottom="@dimen/text_size_medium"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/dont_show_again"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dont_show_again_text"
+            android:text="New Text"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/dialog_message_text_size"
+            android:layout_toLeftOf="@+id/dont_show_again"
+            android:layout_centerVertical="true"
+            />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_buttons_panel_size"
+        android:gravity="center_vertical">
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dialog_buttons_size"
+            android:layout_alignParentLeft="true"
+            android:background="@color/primary"
+            android:id="@+id/ok"
+            android:text="ok"
+            android:minWidth="0dp">
+
+        </com.gc.materialdesign.views.ButtonFlat>
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dialog_buttons_size"
+            android:layout_toRightOf="@+id/ok"
+            android:background="@color/primary"
+            android:id="@+id/cancel"
+            android:text="cancel"
+            >
+
+        </com.gc.materialdesign.views.ButtonFlat>
+    </RelativeLayout>
+
+</LinearLayout>
